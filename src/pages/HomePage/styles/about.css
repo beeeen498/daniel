@@ -1,0 +1,160 @@
+#about {
+    height: 95vh;
+    margin: 80px 5px 0 5px;
+    overflow: hidden;
+    background-image: url("../../../../public/assets/images/concrete_background.png");
+    background-size: contain;
+    /* direction: rtl; */
+}
+
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 0.2fr repeat(4, 1fr);
+    grid-template-rows: 0.3fr repeat(4, 1fr);
+    gap: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.aboutGrid > * {
+    border: 1.5px solid black; /* Add a black border to all grid items */
+}
+
+/* Endless marquee */
+.gridItem1 { 
+    grid-area: 1 / 1 / 2 / 4;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 200%;
+    gap: 1%;
+    
+}
+
+.gridItem1 p {
+    margin: 0;
+}
+
+/* About us heading */
+.gridItem2 { 
+    grid-area: 2 / 1 / 3 / 4; 
+    text-align: center;
+    font-family: var(--headers-font);
+}
+
+.gridItem2 h2 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 40px;
+}
+
+/* Pink bag image */
+.gridItem3 { 
+    grid-area: 1 / 4 / 4 / 6; 
+    z-index: 1;
+    overflow: hidden;
+    border-bottom: 0;
+}
+
+.grid3ItemImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 -345px;
+}
+
+/* Pot image */
+.gridItem5 { 
+    grid-area: 3 / 1 / 6 / 3; 
+}
+
+.gridItem5Image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Quote carousel */
+.gridItem6 { 
+    grid-area: 3 / 3 / 4 / 4; 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    border-bottom: 0;
+    direction: ltr;
+}
+
+.gridItem6 h2 {
+    font-size: 20px;
+    font-family: var(--headers-font);
+    margin: 5px;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+/* Main text */
+.gridItem7 { 
+    grid-area: 4 / 3 / 6 / 6; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    /* border-bottom: 1.5px; */
+    border-top: 2.5px solid var(--black);
+    white-space: pre-line;
+}
+
+.gridItem7 p {
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.aboutGridHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------- Keyframes --------------- */
+
+/* Keyframes for about section */
+@keyframes slidingAboutText {
+    from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(100%);
+      }
+}
+
+.slidingAboutText {
+    white-space: nowrap;
+    /* width: 100%; */
+    animation: slidingAboutText 300s linear infinite;
+}
+
+@keyframes fadeOutAnimation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    animation: fadeOutAnimation 2s ease-in;
+    opacity: 0;
+}

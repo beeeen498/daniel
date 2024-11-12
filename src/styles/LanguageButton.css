@@ -1,0 +1,16 @@
+.languageButtonAndIcon{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 10px;
+    opacity: 1;
+}
+
+.languageIcon{
+    margin-right: 10px;
+}
+
+.languageIcon:hover{
+    transform: scale(110%);
+    transition: .5s;
+}

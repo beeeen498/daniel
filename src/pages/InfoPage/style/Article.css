@@ -1,0 +1,33 @@
+.articleImageAndCopyright{
+    height: 350px;
+    width: 500px;
+    position: relative;
+}
+
+.articleImage{
+    height: 350px;
+    width: 500px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--black);
+}
+
+.articleImage:hover{
+    cursor: pointer;
+}
+
+.credit{
+    position: absolute;
+    font-size: x-small;
+    transform: translate(1px, 12px);
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.642);
+    color: var(--white);
+    bottom: 0;
+    
+}
+
+/* title */
+.article h3{
+    cursor: pointer;
+}

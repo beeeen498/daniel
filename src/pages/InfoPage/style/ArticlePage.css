@@ -1,0 +1,40 @@
+.articlePage{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.articlePageDiv{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+}
+
+/* image */
+.articlePageImage{
+    width: 700px;
+    position: relative;
+}
+
+/* copy rights */
+.articlePageCredit{
+    width: 700px;
+    direction: ltr;
+}
+
+/* heading */
+.articlePageHeading{
+    font-size: 21px;
+}
+
+/* text */
+.articlePageText{
+    text-align: justify;
+    text-wrap: wrap;
+    font-family: var(--body-font);
+    margin: 30px 0 40px 0;
+}

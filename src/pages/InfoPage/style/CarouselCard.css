@@ -1,0 +1,42 @@
+.carouselCard {
+    height: 300px;
+    width: 300px;
+    border: 1px solid var(--black);
+    /* border-radius: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    position: absolute; /* Absolute positioning for stacking */
+    transition: transform 0.5s ease, filter 0.5s ease;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.carouselCard.focused {
+    filter: none;
+}
+
+.carouselCard.blurred {
+    filter: blur(2px);
+    opacity: 0.6;
+}
+
+.companyLogo {
+    background-size: contain;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--white);
+}
+
+.companyName {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid var(--black);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}

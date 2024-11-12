@@ -1,0 +1,75 @@
+/* Store Menu Styles */
+.storeMenu {
+    max-width: 700px;
+    padding: 50px 20px;
+    /* position: static; */
+    font-family: var(--body-font);
+    display: flex;
+    flex-direction: column;
+    flex: .2;
+    /* margin-top: 50px; */
+}
+
+/* Accordion Selection Styles */
+.storeMenuAccordionSelection {
+    border-top: 1px solid var(--silver);
+    /* border-bottom: 1px solid var(--silver); */
+    padding: 10px 0;
+}
+
+.storeMenuAccordionSelection:last-child{
+    border-bottom: 1px solid var(--silver);
+}
+
+.storeMenuAccordionSelection:hover {
+    cursor: pointer;
+}
+
+/* Main Accordion Selection Styles */
+.storeMenuAccordionSelectionMain {
+    position: relative;
+}
+
+/* Accordion Category Styles */
+.storeMenuAccordionCategory {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Accordion Options Styles */
+.storeMenuAccordionOptions {
+    margin-top: 7px;
+    text-transform: capitalize;
+}
+
+/* Accordion Content Styles */
+.storeMenuAccordionContent {
+    margin-top: 20px;
+    text-transform: capitalize;
+    max-height: 300px;
+    overflow: scroll;
+}
+
+.storeMenuAccordionContent input {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* Arrow Icon Styles */
+.storeMenuArrowIcon {
+    position: absolute;
+    top: 38%;
+    right: 0;
+}
+
+.storeMenuArrowIconHebrew{
+    right: 90%;
+}
+
+.storeNav{
+    height: 106px;
+}
+
+.optionLabel{
+    cursor: pointer;
+}

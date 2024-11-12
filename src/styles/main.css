@@ -1,0 +1,72 @@
+/* google font p */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+:root{
+    --headers-font: "Belleza", sans-serif;
+    --body-font: "Assistant", sans-serif;;
+
+    /* colors */
+    --white: #F3F3F3;
+    --black: #000000;
+    --silver: #CBCBCB;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    font-family: var(--body-font);
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--headers-font);
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+h2{
+    font-family: var(--body-font);
+}
+
+
+/* css for pagination in store pages */
+.pagination{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.pagination button{
+    all: unset;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+}
+
+.pagination button:hover{
+    cursor: pointer;
+}
+
+/* css to align text when in hebrew */
+.rtl{
+    direction: rtl;
+}

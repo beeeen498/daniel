@@ -1,0 +1,206 @@
+/* Card Container */
+.rotatingCard {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    transition: ease all 0.3s; /* Faster transition for hover effect */
+    perspective: 1200px;
+    background-color: transparent;
+    overflow: visible;
+    border: none;
+    text-shadow: 
+        -.5px -.5px 0 #000, /* Shadow on top-left */
+         .5px -.5px 0 #000, /* Shadow on top-right */
+        -.5px  .5px 0 #000, /* Shadow on bottom-left */
+         .5px  .5px 0 #000; /* Shadow on bottom-right */
+}
+
+/* Card Hover Effects */
+.rotatingCard:hover {
+    /* background: rgba(0, 0, 0, .4); Add background effect on hover */
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+/* Card Hover Effects - Cover Only */
+.rotatingCard:hover .cover::after {
+    background-color: rgba(0, 0, 0, .4); /* Match background color effect */
+}
+
+/* Card Click Effects - Spinning */
+.rotatingCard.spin .cover {
+    transform: rotateX(0deg) rotateY(-180deg);
+    transform-style: preserve-3d;
+}
+
+.rotatingCard.spin .cover:before {
+    transform: translateZ(30px);
+    transform-style: preserve-3d;
+}
+
+.rotatingCard.spin .cover:after {
+    background-color: black;
+    transform-style: preserve-3d;
+}
+
+.rotatingCard.spin .cover h1 {
+    transform: translateZ(100px);
+    transform-style: preserve-3d;
+}
+
+.rotatingCard.spin .cover .price {
+    transform: translateZ(60px);
+    transform-style: preserve-3d;
+}
+
+.rotatingCard.spin .cover button {
+    transform: translateZ(-60px) rotateY(-180deg);
+    transform-style: preserve-3d;
+}
+
+/* Cover Styles */
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all 2s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(9, 9, 9, 0.8);
+    backface-visibility: hidden;
+}
+
+/* Cover Before Pseudo-element */
+.cover:before {
+    content: '';
+    position: absolute;
+    border: 5px solid rgba(255, 255, 255, .5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: ease all 2s;
+    transform-style: preserve-3d;
+    transform: translateZ(0px);
+}
+
+/* Cover After Pseudo-element */
+.cover:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    transition: ease all 1.3s;
+}
+
+/* Cover Text and Price Styles */
+.coverText{
+    opacity: 0;
+}
+
+.cover:hover .coverText{
+    opacity: 1;
+    z-index: 1000;
+}
+
+.cover h1 {
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2s;
+    z-index: 3;
+    font-size: 30px;
+    transform: translateZ(0px);
+}
+
+.cover .price {
+    font-weight: 200;
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2s;
+    z-index: 4;
+    font-size: 2em;
+    transform: translateZ(0px);
+}
+
+/* Card Back Styles */
+.cardBack {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--black);
+    transform-style: preserve-3d;
+    transition: ease all 2s;
+    transform: translateZ(-1px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.rotatingCardCloseIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.rotatingCardCloseIcon:hover{
+    cursor: pointer;
+}
+
+.cardBackDetails{
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardBackDetails p{
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+/* Card Back Link Styles */
+.cardBack button{
+    transform-style: preserve-3d;
+    transition: ease transform 2s, ease .2s;
+    transform: translateZ(-1px) rotateY(-180deg);
+    background: transparent;
+    border: 1px solid #9f8f8f;
+    font-weight: 200;
+    font-size: 1.3em;
+    color: white;
+    padding: 14px 32px;
+    outline: none;
+    text-decoration: none;
+    width: 190px;
+    text-align: center;
+    z-index: -200;
+}
+
+/* Card Back Link Hover Effects */
+.cardBack button:hover {
+    background-color: red;
+    color: #0b0f08;
+    cursor: pointer;
+    z-index: 444;
+}

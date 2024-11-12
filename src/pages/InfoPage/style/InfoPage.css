@@ -1,0 +1,54 @@
+/* Main content styling */
+.infoPageMainContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Carousel container styling */
+.carouselContainer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    position: relative;
+    height: 300px;
+}
+
+/* Carousel wrapper styling for transitions */
+.carouselWrapper {
+    transition: transform 0.3s, filter 0.3s, opacity 0.3s;
+}
+
+/* Company text styling */
+.companyText {
+    width: 60%;
+    text-align: justify;
+    font-size: 110%;
+    padding: 20px;
+}
+
+/* Text and arrows container styling */
+.textAndArrows {
+    margin: 50px 40px 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Arrow icon hover effect */
+.arrowIcon:hover {
+    cursor: pointer;
+    transform: scale(110%);
+    transition: 1s;
+}
+
+
+/* articlesSection */
+.articlesSection{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
