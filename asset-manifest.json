@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/daniel/static/css/main.980faf6a.css",
+    "main.js": "/daniel/static/js/main.1e58181b.js",
+    "static/media/concrete_background.png": "/daniel/static/media/concrete_background.e86d5df2ac98b864f467.png",
+    "static/media/Virgil-Abloh.txt": "/daniel/static/media/Virgil-Abloh.246cf206accc9a0f7355.txt",
+    "index.html": "/daniel/index.html",
+    "static/media/Farfetch.txt": "/daniel/static/media/Farfetch.31d6cfe0d16ae931b73c.txt",
+    "main.980faf6a.css.map": "/daniel/static/css/main.980faf6a.css.map",
+    "main.1e58181b.js.map": "/daniel/static/js/main.1e58181b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.980faf6a.css",
+    "static/js/main.1e58181b.js"
+  ]
+}
